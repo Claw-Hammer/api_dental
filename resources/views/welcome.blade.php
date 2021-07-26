@@ -74,15 +74,19 @@
                                     <p>- Clone repo from Github: https://github.com/Claw-Hammer/api_dental.git.</p>
                                     <p>- Jump into project's directory.</p>
                                     <p>- Create an empty database and setup DB connection credentials in your .env file (based on the .env.example file included).</p>
-                                    <p>- Run 'php artisan key:generate'.</p>
+                                    <p>- open a new console terminal.</p>
                                     <p>- Run 'composer install'.</p>
+                                    <p>- Run 'php artisan key:generate'.</p>
                                     <p>- Run 'php artisan migrate --seed'.</p>
-                                    <p>- Run 'php artisan passport:install'.</p>
-                                    <p>- Run 'php artisan passport:keys'.</p>
                                     <p>- Run 'npm install'.</p>
                                     <p>- Run 'npm run dev' (this and the previous line are only to generate the welcome page).</p>
-                                    <p>- Run 'php artisan serve'.</p>
-                                    <p>- Open your web browser and go to the generated URL http://127.0.0.1:8000 (Only to view the welcome page).</p>
+                                    <p>- If you're using a local dev environment like Xampp, Wamp or Laragon you can use a friendly URL like http://apidental.test</p>
+                                    <p>- If you want to use the included web server in Laravel:</p>
+                                            <ul>
+                                                <li>- Run 'php artisan serve'.</li>
+                                                <li>- Open your web browser and go to the generated URL http://127.0.0.1:8000 (Only to view the welcome page).</li>
+                                                <li>- Please change the URLs in Postman collection.</li>
+                                            </ul>
                                 </div>
                             </div>
                         </div>
