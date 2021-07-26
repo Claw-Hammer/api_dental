@@ -30,6 +30,7 @@ class NotificationController extends Controller
     public function store(Request $request)
     {
         //users can create their own notifications?
+        return response('', 422);
     }
 
     /**
