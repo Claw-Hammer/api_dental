@@ -48,7 +48,10 @@ class NotificationController extends Controller
                 'notifications' => $query
             ], 200);
         }
-        return response('', 422);
+
+        return response([
+            'Error' => 'Unauthorized'
+        ], 401);
     }
 
     /**
@@ -61,12 +64,18 @@ class NotificationController extends Controller
     public function update(Request $request, Notification $notification)
     {
         $request->validate([
-            'id' => 'required|integer|exists:notifications,id',
-            'status' => 'required|string|in:0,1',
+            'status' => 'required|string|in:0,1'
         ]);
 
-        $notification->update($request->all());
-        return response($notification, 200);
+        if ($notification->user_id == auth()->user()->id) {
+
+            $notification->update($request->all());
+            return response($notification, 200);
+        }
+
+        return response([
+            'Error' => 'Unauthorized'
+        ], 401);
     }
 
     /**
@@ -81,6 +90,9 @@ class NotificationController extends Controller
             $notification->delete();
             return response($notification, 200);
         }
-        return response('', 422);
+
+        return response([
+            'Error' => 'Unauthorized'
+        ], 401);
     }
 }
