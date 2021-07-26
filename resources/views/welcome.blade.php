@@ -77,6 +77,7 @@
                                     <p>- Run 'php artisan key:generate'.</p>
                                     <p>- Run 'composer install'.</p>
                                     <p>- Run 'php artisan migrate --seed'.</p>
+                                    <p>- Run 'php artisan passport:install'.</p>
                                     <p>- Run 'php artisan passport:keys'.</p>
                                     <p>- Run 'npm install'.</p>
                                     <p>- Run 'npm run dev' (this and the previous line are only to generate the welcome page).</p>
