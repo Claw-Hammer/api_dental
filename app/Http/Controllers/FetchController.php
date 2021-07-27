@@ -11,7 +11,7 @@ class FetchController extends Controller
 {
     public function fetch(): Json
     {
-        $response = Http::get('https://quizapi.io/api/v1/questions', [
+        $response = Http::get(config('services.questions_api.route'), [
             'apiKey' => config('services.questions_api.key'),
             'category' => 'linux',
             'limit' => 3,

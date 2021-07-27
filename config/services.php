@@ -31,6 +31,7 @@ return [
     ],
 
     'questions_api' => [
+        'route' => env('QUIZ_API_ROUTE'),
         'key' => env('QUIZ_API_KEY')
     ],
 ];
